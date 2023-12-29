@@ -3,8 +3,7 @@ package com.tw.refactoring.composingmethods;
 public class InlineTemp {
 
     boolean hasDiscount(Order order) {
-        final double basePrice = order.basePrice();
-        return basePrice > 1000;
+        return order.basePrice() > 1000;
     }
 }
 
