@@ -9,11 +9,12 @@ public class ExtractVariables {
     private Integer resize;
 
     void renderBanner() {
+        final boolean isMaxOs = platform.toUpperCase().contains("MAC");
+        final boolean isIE = browser.toUpperCase().contains("IE");
+        final boolean wasResized = resize > 0;
+
         // expression is complicated
-        if ((platform.toUpperCase().contains("MAC")) &&
-                (browser.toUpperCase().contains("IE")) &&
-                wasInitialized() && resize > 0 )
-        {
+        if (isMaxOs && isIE && wasInitialized() && wasResized ) {
             // do something
         }
     }
