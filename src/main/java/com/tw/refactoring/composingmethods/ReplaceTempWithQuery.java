@@ -7,12 +7,14 @@ public class ReplaceTempWithQuery {
     private double  itemPrice;
 
     double calculateTotal() {
-        // a temp for later use
-        final double basePrice = quantity * itemPrice;
-        if (basePrice > 1000) {
-            return basePrice * 0.95;
+        if (basePrice() > 1000) {
+            return basePrice() * 0.95;
         } else {
-            return basePrice * 0.98;
+            return basePrice() * 0.98;
         }
+    }
+
+    double basePrice() {
+        return quantity * itemPrice;
     }
 }
