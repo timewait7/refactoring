@@ -6,17 +6,19 @@ public class ExtractMethod {
 
     void printOwing() {
         printBanner();
-
-        // Print Details
-        System.out.println("name: " + name);
-        System.out.println("amount: " + getOutstanding());
+        printDetails(getOutstanding());
     }
 
     void printBanner() {
 
     }
 
-    String getOutstanding() {
-        return "";
+    void printDetails(double outstanding) {
+        System.out.println("name: " + name);
+        System.out.println("amount: " + outstanding);
+    }
+
+    double getOutstanding() {
+        return 0.0;
     }
 }
