@@ -9,8 +9,12 @@ class Report {
     private Date previousEnd;
 
     void sendReport() {
-        Date nextDay = new Date(previousEnd.getYear(),
-                previousEnd.getMonth(), previousEnd.getDate() + 1);
+        // what is the difference between 'Extract Method' with 'Introduce Foreign Method'
+        Date nextDay = nextDay(previousEnd);
         // ...
+    }
+
+    private static Date nextDay(Date aDate) {
+        return new Date(aDate.getYear(), aDate.getMonth(), aDate.getDate() + 1);
     }
 }
