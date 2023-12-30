@@ -7,9 +7,9 @@ public class SplitTemporaryVariable {
     private int width;
 
     void f() {
-        double temp = 2 * (height + width);
-        System.out.println(temp);
-        temp = height * width;
-        System.out.println(temp);
+        final int perimeter = 2 * (height + width);
+        System.out.println(perimeter);
+        final int area = height * width;
+        System.out.println(area);
     }
 }
