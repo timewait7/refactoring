@@ -5,6 +5,9 @@ public class ExtractClass {
 
 class Person {
     String name;
+}
+
+class TelephoneNumber {
     String officeAreaCode;
     String officeNumber;
 
